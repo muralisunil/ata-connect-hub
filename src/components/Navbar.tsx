@@ -46,6 +46,7 @@ const Navbar = () => {
               {link.label}
             </Link>
           ))}
+          <ThemeSwitcher />
           <Button asChild size="sm" className="ml-2 gradient-saffron border-0 text-primary-foreground hover:opacity-90">
             <Link to="/membership">Join Us</Link>
           </Button>
