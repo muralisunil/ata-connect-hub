@@ -92,7 +92,77 @@
     --sidebar-border: 20 15% 20%;
     --sidebar-ring: 36 90% 50%;
   }
-}
+  }
+
+  .theme-blue :root,
+  .theme-blue {
+    --primary: 210 90% 50%;
+    --primary-foreground: 210 100% 98%;
+    --secondary: 230 60% 45%;
+    --secondary-foreground: 210 100% 98%;
+    --accent: 200 50% 40%;
+    --accent-foreground: 210 100% 98%;
+    --ring: 210 90% 50%;
+    --saffron: 210 90% 50%;
+    --saffron-light: 205 85% 65%;
+    --saffron-dark: 215 80% 38%;
+    --gold: 200 75% 55%;
+    --sidebar-primary: 210 90% 50%;
+    --sidebar-primary-foreground: 210 100% 98%;
+    --sidebar-ring: 210 90% 50%;
+  }
+
+  .theme-blue.dark {
+    --primary: 210 85% 55%;
+    --primary-foreground: 210 30% 8%;
+    --secondary: 230 55% 50%;
+    --secondary-foreground: 210 20% 92%;
+    --accent: 200 45% 40%;
+    --accent-foreground: 210 20% 92%;
+    --ring: 210 85% 55%;
+    --saffron: 210 85% 55%;
+    --saffron-light: 205 80% 65%;
+    --saffron-dark: 215 75% 40%;
+    --gold: 200 70% 55%;
+    --sidebar-primary: 210 85% 55%;
+    --sidebar-primary-foreground: 210 30% 8%;
+    --sidebar-ring: 210 85% 55%;
+  }
+
+  .theme-emerald :root,
+  .theme-emerald {
+    --primary: 160 80% 38%;
+    --primary-foreground: 160 100% 98%;
+    --secondary: 170 60% 30%;
+    --secondary-foreground: 160 100% 98%;
+    --accent: 145 40% 35%;
+    --accent-foreground: 160 100% 98%;
+    --ring: 160 80% 38%;
+    --saffron: 160 80% 38%;
+    --saffron-light: 155 70% 55%;
+    --saffron-dark: 165 75% 28%;
+    --gold: 150 65% 45%;
+    --sidebar-primary: 160 80% 38%;
+    --sidebar-primary-foreground: 160 100% 98%;
+    --sidebar-ring: 160 80% 38%;
+  }
+
+  .theme-emerald.dark {
+    --primary: 160 75% 45%;
+    --primary-foreground: 160 30% 8%;
+    --secondary: 170 55% 38%;
+    --secondary-foreground: 160 20% 92%;
+    --accent: 145 35% 38%;
+    --accent-foreground: 160 20% 92%;
+    --ring: 160 75% 45%;
+    --saffron: 160 75% 45%;
+    --saffron-light: 155 65% 58%;
+    --saffron-dark: 165 70% 32%;
+    --gold: 150 60% 48%;
+    --sidebar-primary: 160 75% 45%;
+    --sidebar-primary-foreground: 160 30% 8%;
+    --sidebar-ring: 160 75% 45%;
+  }
 
 @layer base {
   * {

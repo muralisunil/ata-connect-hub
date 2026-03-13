@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import ThemeSwitcher from "@/components/ThemeSwitcher";
 
 const navLinks = [
   { label: "Home", href: "/" },
@@ -45,6 +46,7 @@ const Navbar = () => {
               {link.label}
             </Link>
           ))}
+          <ThemeSwitcher />
           <Button asChild size="sm" className="ml-2 gradient-saffron border-0 text-primary-foreground hover:opacity-90">
             <Link to="/membership">Join Us</Link>
           </Button>
@@ -81,6 +83,9 @@ const Navbar = () => {
                 {link.label}
               </Link>
             ))}
+            <div className="mt-2 flex items-center gap-3">
+              <ThemeSwitcher />
+            </div>
             <Button asChild className="mt-2 gradient-saffron border-0 text-primary-foreground">
               <Link to="/membership" onClick={() => setIsOpen(false)}>Join Us</Link>
             </Button>
