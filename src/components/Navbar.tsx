@@ -3,19 +3,21 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import ThemeSwitcher from "@/components/ThemeSwitcher";
+import SettingsDropdown from "@/components/SettingsDropdown";
+import { useTranslation } from "@/i18n/LanguageContext";
 
 const navLinks = [
-  { label: "Home", href: "/" },
-  { label: "Events", href: "/events" },
-  { label: "Membership", href: "/membership" },
-  { label: "Leadership", href: "/leadership" },
-  { label: "Contact", href: "/contact" },
+  { labelKey: "home" as const, href: "/" },
+  { labelKey: "events" as const, href: "/events" },
+  { labelKey: "membership" as const, href: "/membership" },
+  { labelKey: "leadership" as const, href: "/leadership" },
+  { labelKey: "contact" as const, href: "/contact" },
 ];
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
+  const { t } = useTranslation();
 
   return (
     <header className="sticky top-0 z-50 border-b border-border/50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -25,8 +27,8 @@ const Navbar = () => {
             <span className="text-lg font-bold text-primary-foreground font-display">A</span>
           </div>
           <div className="flex flex-col">
-            <span className="text-lg font-bold font-display leading-tight text-foreground">ATA Seattle</span>
-            <span className="text-[10px] uppercase tracking-widest text-muted-foreground">American Telangana Association</span>
+            <span className="text-lg font-bold font-display leading-tight text-foreground">{t.nav.orgName}</span>
+            <span className="text-[10px] uppercase tracking-widest text-muted-foreground">{t.nav.orgFull}</span>
           </div>
         </Link>
 
@@ -43,12 +45,12 @@ const Navbar = () => {
                   : "text-muted-foreground"
               )}
             >
-              {link.label}
+              {t.nav[link.labelKey]}
             </Link>
           ))}
-          <ThemeSwitcher />
+          <SettingsDropdown />
           <Button asChild size="sm" className="ml-2 gradient-saffron border-0 text-primary-foreground hover:opacity-90">
-            <Link to="/membership">Join Us</Link>
+            <Link to="/membership">{t.nav.joinUs}</Link>
           </Button>
         </nav>
 
@@ -80,14 +82,14 @@ const Navbar = () => {
                     : "text-muted-foreground"
                 )}
               >
-                {link.label}
+                {t.nav[link.labelKey]}
               </Link>
             ))}
             <div className="mt-2 flex items-center gap-3">
-              <ThemeSwitcher />
+              <SettingsDropdown />
             </div>
             <Button asChild className="mt-2 gradient-saffron border-0 text-primary-foreground">
-              <Link to="/membership" onClick={() => setIsOpen(false)}>Join Us</Link>
+              <Link to="/membership" onClick={() => setIsOpen(false)}>{t.nav.joinUs}</Link>
             </Button>
           </div>
         </nav>
