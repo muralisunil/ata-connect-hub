@@ -83,6 +83,9 @@ const Navbar = () => {
                 {link.label}
               </Link>
             ))}
+            <div className="mt-2 flex items-center gap-3">
+              <ThemeSwitcher />
+            </div>
             <Button asChild className="mt-2 gradient-saffron border-0 text-primary-foreground">
               <Link to="/membership" onClick={() => setIsOpen(false)}>Join Us</Link>
             </Button>
