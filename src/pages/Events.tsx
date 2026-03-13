@@ -7,7 +7,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { upcomingEvents, pastEvents } from "@/lib/mock-data";
 import { toast } from "sonner";
 
-const EventCard = ({ event, isPast = false }: { event: typeof upcomingEvents[0]; isPast?: boolean }) => (
+const EventCard = ({ event, isPast = false }: { event: (typeof upcomingEvents)[0] | (typeof pastEvents)[0]; isPast?: boolean }) => (
   <Card className="overflow-hidden hover:shadow-lg transition-shadow">
     <div className="aspect-video bg-muted relative overflow-hidden">
       <div className="absolute inset-0 gradient-saffron opacity-15" />
